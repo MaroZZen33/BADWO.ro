@@ -67,3 +67,11 @@ form.addEventListener('submit', async (e) => {
     btn.disabled = false;
   }
 });
+
+// Ascunde etichetele „Premieră” după lansarea filmului (vineri, 9 octombrie 2026, 12:00)
+const LAUNCH = new Date('2026-10-09T12:00:00+03:00');
+function checkLaunch(){
+  if (Date.now() >= LAUNCH) document.querySelectorAll('.pre-launch').forEach(el => el.remove());
+}
+checkLaunch();
+setInterval(checkLaunch, 30000);
