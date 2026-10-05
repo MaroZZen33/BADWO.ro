@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Adevărata comoară — short film · BADWO Media</title>
+<meta name="description" content="Adevărata comoară — short film BADWO Media inspirat din Roada Duhului (Galateni 5:22-23), în colaborare cu Biserica Adventistă Sperieteni.">
+<meta property="og:title" content="Adevărata comoară — short film · BADWO Media">
+<meta property="og:description" content="Un tânăr urmează o hartă misterioasă în căutarea comorii pe care a căutat-o toată viața.">
+<meta property="og:image" content="assets/backstage-1.jpg">
+<meta name="theme-color" content="#0A0A0B">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,400;1,500&family=Manrope:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<!-- Stilul e inclus aici, ca pagina să arate la fel ca site-ul chiar și deschisă separat -->
+<style>
+/* ===== BADWO Media — culori și fonturi (schimbați aici) ===== */
+:root{
+  --bg:#0A0A0B;
+  --bg-2:#141416;
+  --card:#18181b;
+  --line:#2a2926;
+  --text:#EDEAE4;
+  --muted:#c4c0b8;
+  --dim:#8f8b84;
+  --accent:#E0A458;
+  --serif:'Cormorant Garamond', Georgia, serif;
+  --sans:'Manrope', 'Helvetica Neue', sans-serif;
+  --mono:'IBM Plex Mono', ui-monospace, monospace;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:var(--text);text-decoration:none}
+a:hover{color:var(--accent)}
+h1,h2,h3,p,ul,ol,figure{margin:0}
+ul,ol{list-style:none;padding:0}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+
+.skip{position:absolute;left:-9999px;top:8px;background:var(--accent);color:var(--bg);padding:10px 16px;z-index:100}
+.skip:focus{left:8px}
+.hidden{display:none}
+
+.wrap{max-width:1320px;margin:0 auto;padding-left:32px;padding-right:32px}
+.wrap-inner{max-width:1320px;margin:0 auto}
+
+/* ===== Butoane ===== */
+.btn{display:inline-flex;align-items:center;gap:12px;min-height:52px;padding:0 26px;font:inherit;font-weight:600;cursor:pointer;border:0;transition:background .2s,color .2s}
+.btn-accent{background:var(--accent);color:var(--bg)}
+.btn-accent:hover{background:var(--text);color:var(--bg)}
+.btn-ghost{border:1px solid #5c5952}
+.btn-outline{border:1px solid var(--text);min-height:44px;padding:0 22px;font-size:14px}
+
+/* ===== Meniu ===== */
+.header{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px;padding-top:28px;padding-bottom:28px}
+.brand{display:flex;align-items:center;gap:12px}
+.brand img{height:40px;width:auto}
+.brand span{font-family:var(--mono);font-size:12px;letter-spacing:.3em;color:var(--accent)}
+.nav{display:flex;flex-wrap:wrap;gap:28px;font-family:var(--mono);font-size:13px;letter-spacing:.12em;text-transform:uppercase}
+.menu-toggle{display:none;background:none;border:1px solid #5c5952;color:var(--text);font-family:var(--mono);font-size:13px;letter-spacing:.12em;text-transform:uppercase;min-height:44px;padding:0 16px;cursor:pointer}
+
+/* ===== Hero ===== */
+.hero-section{padding:0 32px}
+.hero{position:relative;background:var(--bg-2);min-height:760px;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden}
+.hero::before,.hero::after{content:"";position:absolute;left:0;right:0;height:56px;background:#000;z-index:2}
+.hero::before{top:0}.hero::after{bottom:0}
+.hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.55}
+.hero-content{position:relative;z-index:3;padding:120px 56px 104px;display:flex;flex-direction:column;gap:22px;max-width:900px}
+.eyebrow{font-family:var(--mono);font-size:13px;letter-spacing:.25em;color:var(--accent)}
+.hero h1 img{width:min(620px,100%);height:auto}
+.hero-tag{font-family:var(--serif);font-style:italic;font-size:clamp(32px,4vw,52px);line-height:1}
+.hero-text{max-width:560px;font-size:18px;color:var(--muted)}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:8px}
+.strip{padding:18px 0;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-family:var(--mono);font-size:12px;letter-spacing:.18em;color:var(--dim)}
+
+/* ===== Secțiuni ===== */
+.section{padding-top:110px;padding-bottom:40px}
+.section h2{font-family:var(--serif);font-weight:500;font-size:clamp(44px,6vw,64px);line-height:1;margin:8px 0 40px}
+.section-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:40px}
+.section-head h2{margin-bottom:0}
+.num{font-family:var(--mono);font-size:13px;color:var(--accent);letter-spacing:.2em}
+.lead{max-width:420px;color:var(--muted)}
+.ph{font-family:var(--mono);font-size:11px;color:var(--dim);letter-spacing:.1em}
+
+/* ===== Portofoliu ===== */
+.filters{display:flex;flex-wrap:wrap;gap:8px}
+.filters button{min-height:44px;padding:0 18px;font-family:var(--mono);font-size:13px;letter-spacing:.08em;cursor:pointer;border:1px solid #3a3833;background:transparent;color:var(--text)}
+.filters button[aria-pressed="true"]{background:var(--text);color:var(--bg)}
+.projects{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(360px,100%),1fr));gap:40px 28px}
+.project{display:flex;flex-direction:column;gap:14px}
+.project[hidden]{display:none}
+.project-thumb{position:relative;aspect-ratio:16/9;background:var(--card);display:flex;align-items:center;justify-content:center;border:0;padding:0;cursor:pointer;color:var(--text);overflow:hidden;width:100%}
+.project-thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.project-thumb .ph{position:absolute;top:12px;left:14px}
+.play{position:relative;width:60px;height:60px;border-radius:50%;border:1px solid var(--text);display:flex;align-items:center;justify-content:center;background:rgba(10,10,11,.4);transition:background .2s,color .2s}
+.project-thumb:hover .play{background:var(--accent);border-color:var(--accent);color:var(--bg)}
+.project-row{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.project h3{font-family:var(--serif);font-size:26px;font-style:italic;font-weight:400}
+.cat{font-family:var(--mono);font-size:12px;color:var(--accent);letter-spacing:.1em;white-space:nowrap}
+.meta{font-family:var(--mono);font-size:12px;color:var(--dim)}
+
+/* ===== Foto ===== */
+.photos{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));grid-auto-rows:220px;gap:16px}
+.photo{background:var(--card);padding:14px;width:100%;height:100%;object-fit:cover}
+img.photo{padding:0}
+.photo.tall{grid-row:span 2}
+
+/* ===== Servicii ===== */
+.services li{display:flex;flex-wrap:wrap;gap:16px 40px;padding:28px 0;border-top:1px solid var(--line);align-items:baseline}
+.services .n{width:48px;font-family:var(--mono);font-size:13px;color:var(--dim)}
+.services h3{flex:1 1 280px;font-family:var(--serif);font-size:34px;font-weight:400;line-height:1.1}
+.services p{flex:2 1 380px;color:var(--muted)}
+
+/* ===== Proces ===== */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:32px}
+.steps li{display:flex;flex-direction:column;gap:10px}
+.scene{font-family:var(--mono);font-size:12px;color:var(--accent);letter-spacing:.15em}
+.steps h3{font-family:var(--serif);font-size:30px;font-weight:400}
+.steps p{color:var(--muted)}
+
+/* ===== Echipa ===== */
+.team-lead{max-width:640px;margin:-16px 0 48px}
+.team{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,320px));gap:32px}
+.member{display:flex;flex-direction:column;gap:16px}
+.portrait{aspect-ratio:4/5;background:var(--card);padding:14px;width:100%;object-fit:cover}
+img.portrait{padding:0}
+.member figcaption{font-family:var(--serif);font-size:40px;font-style:italic;line-height:1}
+
+/* ===== Contact ===== */
+.contact{display:flex;flex-wrap:wrap;gap:64px;padding-bottom:100px}
+.contact-info{flex:1 1 420px;display:flex;flex-direction:column;gap:28px}
+.section .contact-title{font-style:italic;font-weight:400;font-size:clamp(48px,6vw,84px);margin:0}
+.links{display:flex;flex-direction:column;gap:12px;font-family:var(--mono);font-size:14px}
+.form{flex:1 1 420px;display:flex;flex-direction:column;gap:20px}
+.field{display:flex;flex-direction:column;gap:8px}
+.field label{font-family:var(--mono);font-size:12px;letter-spacing:.12em;color:var(--muted)}
+.field input,.field select,.field textarea{font:inherit;color:var(--text);min-height:48px;padding:0 14px;background:transparent;border:0;border-bottom:1px solid #5c5952;border-radius:0}
+.field select{background:var(--bg)}
+.field textarea{padding:12px 14px;resize:vertical}
+.field input::placeholder,.field textarea::placeholder{color:#7d7972}
+.field input:focus,.field select:focus,.field textarea:focus{border-bottom-color:var(--accent)}
+.form .btn{align-self:flex-start}
+
+/* ===== Footer ===== */
+.footer{border-top:1px solid var(--line)}
+.footer-row{padding-top:28px;padding-bottom:28px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;font-family:var(--mono);font-size:12px;color:var(--dim);letter-spacing:.1em}
+
+/* ===== Video ===== */
+.video-modal{width:min(1100px,94vw);padding:0;border:0;background:#000;color:var(--text)}
+.video-modal::backdrop{background:rgba(0,0,0,.85)}
+.modal-frame{aspect-ratio:16/9}
+.modal-frame iframe{width:100%;height:100%;border:0;display:block}
+.modal-frame p{padding:40px;font-family:var(--mono);font-size:14px;color:var(--muted)}
+.modal-close{position:absolute;top:8px;right:8px;z-index:2;width:44px;height:44px;background:rgba(0,0,0,.6);color:#fff;border:0;font-size:18px;cursor:pointer}
+
+/* ===== Telefon ===== */
+@media (max-width:820px){
+  .wrap{padding-left:20px;padding-right:20px}
+  .hero-section{padding:0}
+  .hero{min-height:620px}
+  .hero::before,.hero::after{height:32px}
+  .hero-content{padding:80px 20px 64px}
+  .menu-toggle{display:inline-flex;align-items:center}
+  .header-cta{display:none}
+  .nav{display:none;width:100%;flex-direction:column;gap:0}
+  .nav.open{display:flex}
+  .nav a{padding:14px 0;border-top:1px solid var(--line)}
+  .strip{padding:16px 20px;justify-content:flex-start;gap:8px 20px}
+  .section{padding-top:80px}
+  .contact{gap:48px}
+  .photos{grid-auto-rows:180px}
+}
+
+/* ===== Mesaj formular ===== */
+.form-status{font-family:var(--mono);font-size:13px;color:var(--accent);min-height:1.6em}
+.form .btn:disabled{opacity:.6;cursor:wait}
+
+
+/* ===== Pagina filmului ===== */
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.6}
+.badge{align-self:flex-start;font-family:var(--mono);font-size:12px;letter-spacing:.18em;background:var(--accent);color:var(--bg);padding:6px 12px}
+.hero-title{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(56px,9vw,120px);line-height:.92;margin:0}
+.film-meta{font-family:var(--mono);font-size:13px;letter-spacing:.14em;color:var(--muted)}
+.video-box{aspect-ratio:16/9;background:var(--card);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:18px;text-align:center;padding:24px}
+.video-wrap{aspect-ratio:16/9}
+.video-wrap iframe{width:100%;height:100%;border:0;display:block}
+.synopsis{font-family:var(--serif);font-size:clamp(24px,2.6vw,32px);line-height:1.35;max-width:880px}
+.synopsis + .synopsis{margin-top:20px;color:var(--muted)}
+.credits li{display:flex;flex-wrap:wrap;gap:16px 40px;padding:24px 0;border-top:1px solid var(--line);align-items:baseline}
+.credits .role{width:200px;font-family:var(--mono);font-size:13px;letter-spacing:.12em;color:var(--dim)}
+.credits .who{flex:1 1 280px;font-family:var(--serif);font-size:32px;line-height:1.25}
+.collab-links{display:flex;flex-wrap:wrap;gap:12px}
+.bts{display:grid;grid-template-columns:1fr;gap:16px}
+.bts img{aspect-ratio:16/9;height:auto}
+.bts > *{width:100%;height:100%;object-fit:cover;background:var(--card)}
+.bts div{padding:14px}
+.bts .wide{grid-column:span 2}
+@media (max-width:820px){.bts .wide{grid-column:auto}}
+
+</style>
+</head>
+<body>
+
+<a class="skip" href="#continut">Sari la conținut</a>
+
+<!-- ============ MENIU (la fel ca pe pagina principală) ============ -->
+<header class="header wrap">
+  <a href="index.html" class="brand" aria-label="BADWO Media — acasă">
+    <img src="assets/logo-badwo.png" alt="BADWO" width="160" height="43">
+    <span>MEDIA</span>
+  </a>
+  <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="meniu">Meniu</button>
+  <nav id="meniu" class="nav" aria-label="Navigare principală">
+    <a href="index.html#portofoliu">Portofoliu</a>
+    <a href="index.html#foto">Foto</a>
+    <a href="index.html#servicii">Servicii</a>
+    <a href="index.html#echipa">Echipa</a>
+    <a href="index.html#contact">Contact</a>
+  </nav>
+  <a href="index.html#contact" class="btn btn-outline header-cta">Hai să colaborăm</a>
+</header>
+
+<main id="continut">
+
+<!-- ============ HERO ============ -->
+<section id="top" class="hero-section">
+  <div class="hero wrap-inner">
+    <!-- Când aveți un cadru din film sau posterul, schimbați src-ul de mai jos -->
+    <img class="hero-bg" src="assets/backstage-1.jpg" alt="">
+    <div class="hero-content">
+      <!-- Eticheta dispare singură vineri, 9 octombrie, la 12:00 -->
+      <span class="badge pre-launch">PREMIERĂ · VINERI, 9 OCTOMBRIE, 12:00</span>
+      <p class="eyebrow">SHORT FILM · 2026 · 4:09 MIN</p>
+      <h1 class="hero-title">Adevărata comoară</h1>
+      <p class="hero-text">Inspirat din Roada Duhului — Galateni 5:22-23. Realizat în colaborare cu Biserica Adventistă Sperieteni.</p>
+      <div class="hero-actions">
+        <a href="#film" class="btn btn-accent">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l12.5-7.5z"/></svg>
+          Urmărește filmul
+        </a>
+        <a href="index.html#portofoliu" class="btn btn-ghost">Alte proiecte</a>
+      </div>
+    </div>
+  </div>
+  <div class="strip wrap-inner" aria-hidden="true">
+    <span>DRAGOSTE</span><span>BUCURIE</span><span>PACE</span><span>ÎNDELUNGĂ RĂBDARE</span><span>BUNĂTATE</span><span>FACERE DE BINE</span><span>CREDINȚĂ</span><span>BLÂNDEȚE</span><span>ÎNFRÂNAREA POFTELOR</span>
+  </div>
+</section>
+
+<!-- ============ 01 FILMUL ============ -->
+<section id="film" class="section wrap">
+  <p class="num">01</p>
+  <h2>Filmul</h2>
+
+  <!--
+    Lansare automată: până vineri, 9 octombrie 2026, ora 12:00 (ora României) se vede mesajul de premieră.
+    După ora aceea, mesajul dispare singur și apare video-ul. Nu trebuie să modificați nimic.
+    Pentru altă dată/oră, schimbați LAUNCH în scriptul de la finalul paginii.
+  -->
+  <div class="video-box pre-launch">
+    <p class="ph">PREMIERA: VINERI, 9 OCTOMBRIE, ORA 12:00</p>
+    <p class="synopsis" style="font-style:italic">Filmul va fi disponibil aici în curând.</p>
+    <a href="https://www.instagram.com/badwo_media/" target="_blank" rel="noopener" class="btn btn-ghost">Urmărește @badwo_media pentru premieră</a>
+  </div>
+  <div class="video-wrap post-launch" hidden data-video="7zY72ZGMgw8"></div>
+</section>
+
+<!-- ============ 02 SINOPSIS ============ -->
+<section class="section wrap">
+  <p class="num">02</p>
+  <h2>Despre film</h2>
+  <p class="synopsis">Un tânăr se trezește singur în mijlocul pădurii, lângă o hartă misterioasă și o pereche de căști. O voce îi spune să urmeze harta: acolo se află toate indiciile pe care le-a căutat toată viața.</p>
+  <p class="synopsis">Prin munți, râuri și sate, descoperă că a căutat fericirea în locuri greșite și strânge, unul câte unul, indicii neașteptate. Dar unde duce, de fapt, X-ul de pe hartă?</p>
+</section>
+
+<!-- ============ 03 CREDITE ============ -->
+<section class="section wrap">
+  <p class="num">03</p>
+  <h2>Credite</h2>
+  <ul class="credits">
+    <li><span class="role">REGIA</span><span class="who">Fabian Badea</span></li>
+    <li><span class="role">CU</span><span class="who">Maryo Bădescu<br>Daria Grigore<br>Andrei Guloiu<br>Ariana Vasile<br>Ananda Vișan<br>Eduard Pasăre<br>David Vasile<br>Andrei Ancuceanu<br>Andrei Sisu</span></li>
+    <li><span class="role">VOCE</span><span class="who">Andrei Sisu</span></li>
+    <li><span class="role">PRODUCȚIE</span><span class="who">BADWO Media</span></li>
+  </ul>
+</section>
+
+<!-- ============ 04 DIN CULISE ============ -->
+<section class="section wrap">
+  <p class="num">04</p>
+  <h2>Din culise</h2>
+  <div class="bts">
+    <img src="assets/backstage-1.jpg" alt="Actor pe set, în lumina reflectorului, la filmarea Adevărata comoară" loading="lazy">
+  </div>
+</section>
+
+<!-- ============ 05 COLABORARE ============ -->
+<section class="section wrap contact">
+  <div class="contact-info">
+    <p class="num">05 · ÎN COLABORARE CU</p>
+    <h2 class="contact-title">Biserica Adventistă Sperieteni</h2>
+    <p class="lead">Mulțumim pentru încredere și pentru tot sprijinul oferit în realizarea filmului.</p>
+    <div class="collab-links">
+      <a href="https://www.facebook.com/biserica.azs.sp/" target="_blank" rel="noopener" class="btn btn-ghost">Facebook</a>
+      <a href="https://www.instagram.com/biserica.azs.sperieteni/" target="_blank" rel="noopener" class="btn btn-ghost">Instagram</a>
+      <a href="https://www.tiktok.com/@biserica.azs.sperieteni" target="_blank" rel="noopener" class="btn btn-ghost">TikTok</a>
+    </div>
+  </div>
+  <div class="contact-info">
+    <p class="num">AI O POVESTE DE SPUS?</p>
+    <h2 class="contact-title">Hai s-o filmăm împreună.</h2>
+    <div class="hero-actions">
+      <a href="index.html#contact" class="btn btn-accent">Hai să colaborăm
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-row">
+    <span>© 2026 BADWO MEDIA · LIMITLESS VISION.</span>
+    <a href="index.html">ACASĂ</a>
+    <a href="#top">ÎNAPOI SUS ↑</a>
+  </div>
+</footer>
+
+<script>
+  // Lansare automată
+  const LAUNCH = new Date('2026-10-09T12:00:00+03:00');
+  function checkLaunch(){
+    if (Date.now() < LAUNCH) return;
+    document.querySelectorAll('.pre-launch').forEach(el => el.remove());
+    document.querySelectorAll('.post-launch').forEach(el => {
+      el.hidden = false;
+      if (el.dataset.video && !el.querySelector('iframe')) {
+        el.innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/' + el.dataset.video + '?rel=0" title="Adevărata comoară — short film" allow="encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>';
+      }
+    });
+  }
+  checkLaunch();
+  setInterval(checkLaunch, 30000);
+
+  const t=document.querySelector('.menu-toggle'),n=document.getElementById('meniu');
+  t.addEventListener('click',()=>{const o=n.classList.toggle('open');t.setAttribute('aria-expanded',o);});
+</script>
+</body>
+</html>
