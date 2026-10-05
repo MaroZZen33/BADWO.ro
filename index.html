@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BADWO Media — Limitless vision.</title>
+<meta name="description" content="BADWO Media — producție audio-video: short films, editări, videoclipuri, fotografie și conținut pentru social media.">
+<meta property="og:title" content="BADWO Media — Limitless vision.">
+<meta property="og:description" content="Short films, editări, videoclipuri și fotografie.">
+<meta property="og:image" content="assets/og-image.jpg">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0A0A0B">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,400;1,500&family=Manrope:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a class="skip" href="#continut">Sari la conținut</a>
+
+<!-- ============ MENIU ============ -->
+<header class="header wrap">
+  <a href="#top" class="brand" aria-label="BADWO Media — acasă">
+    <img src="assets/logo-badwo.png" alt="BADWO" width="160" height="43">
+    <span>MEDIA</span>
+  </a>
+  <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="meniu">Meniu</button>
+  <nav id="meniu" class="nav" aria-label="Navigare principală">
+    <a href="#portofoliu">Portofoliu</a>
+    <a href="#foto">Foto</a>
+    <a href="#servicii">Servicii</a>
+    <a href="#echipa">Echipa</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <a href="#contact" class="btn btn-outline header-cta">Hai să colaborăm</a>
+</header>
+
+<main id="continut">
+
+<!-- ============ HERO ============ -->
+<section id="top" class="hero-section">
+  <div class="hero wrap-inner">
+    <!-- SHOWREEL DE FUNDAL: puneți un fișier video scurt (fără sunet) în assets/ și scoateți comentariul de mai jos.
+    <video class="hero-video" src="assets/showreel.mp4" autoplay muted loop playsinline></video>
+    -->
+    <div class="hero-content">
+      <p class="eyebrow">PRODUCȚIE AUDIO-VIDEO</p>
+      <h1><img src="assets/logo-badwo-limitless.png" alt="BADWO — Limitless vision." width="620" height="211"></h1>
+      <p class="hero-tag">Povești spuse în cadre.</p>
+      <p class="hero-text">Short films, editări și proiecte vizuale făcute de doi prieteni care iubesc filmul.</p>
+      <div class="hero-actions">
+        <!-- Puneți ID-ul videoclipului de YouTube în data-video (ex: pentru youtube.com/watch?v=abc123 scrieți abc123) -->
+        <button type="button" class="btn btn-accent js-video" data-video="">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l12.5-7.5z"/></svg>
+          Vezi showreel-ul
+        </button>
+        <a href="#portofoliu" class="btn btn-ghost">Proiectele noastre</a>
+      </div>
+    </div>
+  </div>
+  <div class="strip wrap-inner" aria-hidden="true">
+    <span>SHORT FILMS</span><span>EDITARE</span><span>VIDEOCLIPURI</span><span>FOTOGRAFIE</span><span>SOCIAL MEDIA</span>
+  </div>
+</section>
+
+<!-- ============ PORTOFOLIU ============ -->
+<section id="portofoliu" class="section wrap">
+  <div class="section-head">
+    <div>
+      <p class="num">01</p>
+      <h2>Portofoliu</h2>
+    </div>
+    <div class="filters" role="group" aria-label="Filtrează proiectele">
+      <button type="button" data-filter="toate" aria-pressed="true">Toate</button>
+      <button type="button" data-filter="short" aria-pressed="false">Short films</button>
+      <button type="button" data-filter="edit" aria-pressed="false">Editări</button>
+      <button type="button" data-filter="clip" aria-pressed="false">Videoclipuri</button>
+    </div>
+  </div>
+
+  <!--
+    CUM ADAUGI UN PROIECT: copiază un <article> întreg și schimbă:
+      data-cat   = short / edit / clip  (pentru filtru)
+      data-video = ID-ul de YouTube
+      imaginea   = pune poza în assets/foto/ și schimbă src-ul
+  -->
+  <div class="projects">
+    <article class="project" data-cat="short">
+      <button type="button" class="project-thumb js-video" data-video="" aria-label="Pornește: Titlu short film 1">
+        <span class="ph">[CADRU DIN PROIECT]</span>
+        <!-- <img src="assets/foto/proiect1.jpg" alt=""> -->
+        <span class="play"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
+      </button>
+      <div class="project-row"><h3>[Titlu short film 1]</h3><span class="cat">SHORT FILM</span></div>
+      <p class="meta">[An] · [Durată] · [Rol: regie, montaj]</p>
+    </article>
+
+    <article class="project" data-cat="edit">
+      <button type="button" class="project-thumb js-video" data-video="" aria-label="Pornește: Titlu edit 1">
+        <span class="ph">[CADRU DIN PROIECT]</span>
+        <span class="play"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
+      </button>
+      <div class="project-row"><h3>[Titlu edit 1]</h3><span class="cat">EDITARE</span></div>
+      <p class="meta">[An] · [Client / pentru cine]</p>
+    </article>
+
+    <article class="project" data-cat="clip">
+      <button type="button" class="project-thumb js-video" data-video="" aria-label="Pornește: videoclip">
+        <span class="ph">[CADRU DIN PROIECT]</span>
+        <span class="play"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
+      </button>
+      <div class="project-row"><h3>[Artist — Piesă]</h3><span class="cat">VIDEOCLIP</span></div>
+      <p class="meta">[An] · [Ce ați făcut]</p>
+    </article>
+
+    <article class="project" data-cat="short">
+      <button type="button" class="project-thumb js-video" data-video="" aria-label="Pornește: Titlu short film 2">
+        <span class="ph">[CADRU DIN PROIECT]</span>
+        <span class="play"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
+      </button>
+      <div class="project-row"><h3>[Titlu short film 2]</h3><span class="cat">SHORT FILM</span></div>
+      <p class="meta">[An] · [Durată] · [Festival, dacă e cazul]</p>
+    </article>
+
+    <article class="project" data-cat="edit">
+      <button type="button" class="project-thumb js-video" data-video="" aria-label="Pornește: Titlu edit 2">
+        <span class="ph">[CADRU DIN PROIECT]</span>
+        <span class="play"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
+      </button>
+      <div class="project-row"><h3>[Titlu edit 2]</h3><span class="cat">EDITARE</span></div>
+      <p class="meta">[An] · [Platformă]</p>
+    </article>
+
+    <article class="project" data-cat="clip">
+      <button type="button" class="project-thumb js-video" data-video="" aria-label="Pornește: videoclip">
+        <span class="ph">[CADRU DIN PROIECT]</span>
+        <span class="play"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
+      </button>
+      <div class="project-row"><h3>[Artist — Piesă]</h3><span class="cat">VIDEOCLIP</span></div>
+      <p class="meta">[An] · [Ce ați făcut]</p>
+    </article>
+  </div>
+</section>
+
+<!-- ============ FOTO ============ -->
+<!-- Înlocuiți fiecare <div class="photo"> cu: <img class="photo" src="assets/foto/nume.jpg" alt="descriere"> (păstrați clasa "tall" unde există) -->
+<section id="foto" class="section wrap">
+  <p class="num">02</p>
+  <h2>Fotografie</h2>
+  <div class="photos">
+    <div class="photo tall"><span class="ph">[FOTO · PORTRET]</span></div>
+    <div class="photo"><span class="ph">[FOTO · BACKSTAGE]</span></div>
+    <div class="photo tall"><span class="ph">[FOTO · STILL DIN FILM]</span></div>
+    <div class="photo"><span class="ph">[FOTO · LOCAȚIE]</span></div>
+    <div class="photo"><span class="ph">[FOTO · EVENIMENT]</span></div>
+    <div class="photo"><span class="ph">[FOTO · PRODUS]</span></div>
+  </div>
+</section>
+
+<!-- ============ SERVICII ============ -->
+<section id="servicii" class="section wrap">
+  <div class="section-head">
+    <div>
+      <p class="num">03</p>
+      <h2>Ce facem</h2>
+    </div>
+    <p class="lead">Fiecare proiect e diferit. Scrie-ne ce ai în minte și îți facem o ofertă pe măsură.</p>
+  </div>
+  <ul class="services">
+    <li><span class="n">01</span><h3>Short films</h3><p>De la idee și scenariu până la filmul final, gata de festival sau de online.</p></li>
+    <li><span class="n">02</span><h3>Videoclipuri muzicale</h3><p>Concept, filmare și montaj pentru artiști care vor un clip cu personalitate.</p></li>
+    <li><span class="n">03</span><h3>Editare video</h3><p>Montaj, ritm, titluri și sunet pentru materialul pe care l-ai filmat deja.</p></li>
+    <li><span class="n">04</span><h3>Conținut social media</h3><p>Reels, TikTok și YouTube Shorts gândite pentru format vertical.</p></li>
+    <li><span class="n">05</span><h3>Fotografie</h3><p>Portrete, backstage, evenimente și imagini pentru branduri.</p></li>
+    <li><span class="n">06</span><h3>Color grading</h3><p>Un look coerent și cinematic pentru proiectul tău.</p></li>
+  </ul>
+</section>
+
+<!-- ============ PROCES ============ -->
+<section class="section wrap">
+  <p class="num">04</p>
+  <h2>Cum lucrăm</h2>
+  <ol class="steps">
+    <li><span class="scene">SCENA 1</span><h3>Ideea</h3><p>Stăm de vorbă, înțelegem ce vrei să transmiți și găsim povestea.</p></li>
+    <li><span class="scene">SCENA 2</span><h3>Pre-producție</h3><p>Scenariu, storyboard, locații și planul de filmare.</p></li>
+    <li><span class="scene">SCENA 3</span><h3>Filmare</h3><p>Imagine, lumină și sunet captate pe set.</p></li>
+    <li><span class="scene">SCENA 4</span><h3>Post-producție</h3><p>Montaj, color grading, sunet și livrare în formatul potrivit.</p></li>
+  </ol>
+</section>
+
+<!-- ============ ECHIPA ============ -->
+<section id="echipa" class="section wrap">
+  <p class="num">05</p>
+  <h2>Echipa</h2>
+  <p class="lead team-lead">[Povestea BADWO în două-trei propoziții: cum v-ați cunoscut, de unde vine numele, ce vă place să filmați.]</p>
+  <div class="team">
+    <figure class="member">
+      <div class="portrait"><span class="ph">[PORTRET]</span></div>
+      <!-- <img class="portrait" src="assets/foto/sami.jpg" alt="Sami"> -->
+      <figcaption>Sami</figcaption>
+    </figure>
+    <figure class="member">
+      <div class="portrait"><span class="ph">[PORTRET]</span></div>
+      <!-- <img class="portrait" src="assets/foto/fabi.jpg" alt="Fabi"> -->
+      <figcaption>Fabi</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact" class="section wrap contact">
+  <div class="contact-info">
+    <p class="num">06 · CONTACT &amp; COLABORĂRI</p>
+    <h2 class="contact-title">Ai o idee? Hai s-o filmăm.</h2>
+    <p class="lead">Suntem deschiși la colaborări cu artiști, branduri, alți creatori și oricine are o poveste de spus.</p>
+    <ul class="links">
+      <li><a href="mailto:[EMAIL]">[EMAIL]</a></li>
+      <li><a href="https://instagram.com/[cont]" target="_blank" rel="noopener">Instagram — [@cont]</a></li>
+      <li><a href="https://tiktok.com/@[cont]" target="_blank" rel="noopener">TikTok — [@cont]</a></li>
+      <li><a href="https://youtube.com/@[canal]" target="_blank" rel="noopener">YouTube — [canal]</a></li>
+    </ul>
+  </div>
+
+  <!--
+    FORMULAR (Formspree): faceți cont pe formspree.io, creați un formular nou
+    și înlocuiți XXXXXXXX de mai jos cu codul primit (ex: https://formspree.io/f/abcdwxyz).
+  -->
+  <form class="form" id="contact-form" action="https://formspree.io/f/XXXXXXXX" method="POST">
+    <input type="hidden" name="_subject" value="Mesaj nou de pe site-ul BADWO Media">
+    <p class="hidden"><label>Nu completa: <input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label></p>
+    <div class="field"><label for="nume">NUME</label><input id="nume" name="nume" type="text" placeholder="Cum te cheamă" required autocomplete="name"></div>
+    <div class="field"><label for="email">EMAIL</label><input id="email" name="email" type="email" placeholder="adresa@exemplu.ro" required autocomplete="email"></div>
+    <div class="field"><label for="tip">TIP PROIECT</label>
+      <select id="tip" name="tip">
+        <option>Short film</option><option>Videoclip</option><option>Editare</option><option>Fotografie</option><option>Colaborare</option><option>Altceva</option>
+      </select>
+    </div>
+    <div class="field"><label for="mesaj">MESAJ</label><textarea id="mesaj" name="mesaj" rows="4" placeholder="Povestește-ne pe scurt ideea" required></textarea></div>
+    <button type="submit" class="btn btn-accent">Trimite mesajul
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </button>
+    <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+  </form>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-row">
+    <span>© <span id="an">2026</span> BADWO MEDIA · LIMITLESS VISION.</span>
+    <span>[ORAȘ], ROMÂNIA</span>
+    <a href="#top">ÎNAPOI SUS ↑</a>
+  </div>
+</footer>
+
+<!-- Fereastra pentru video -->
+<dialog class="video-modal" id="video-modal" aria-label="Video">
+  <button type="button" class="modal-close" aria-label="Închide">✕</button>
+  <div class="modal-frame"></div>
+</dialog>
+
+<script src="script.js"></script>
+</body>
+</html>
