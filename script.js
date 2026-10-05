@@ -37,12 +37,12 @@ modal.addEventListener('close', () => { frame.innerHTML = ''; });
 // Anul curent în footer
 document.getElementById('an').textContent = new Date().getFullYear();
 
-// Formular de contact (Formspree) — trimite fără să părăsești pagina
+// Formular de contact (Web3Forms) — trimite fără să părăsești pagina
 const form = document.getElementById('contact-form');
 const statusEl = document.getElementById('form-status');
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
-  if (form.action.includes('XXXXXXXX')) {
+  if (form.querySelector('[name="access_key"]').value === 'CHEIA-VOASTRA') {
     statusEl.textContent = 'Formularul nu e încă conectat. Scrie-ne direct pe email.';
     return;
   }

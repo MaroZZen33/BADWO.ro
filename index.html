@@ -169,28 +169,30 @@
     <h2 class="contact-title">Ai o idee? Hai s-o filmăm.</h2>
     <p class="lead">Suntem deschiși la colaborări cu artiști, branduri, alți creatori și oricine are o poveste de spus.</p>
     <ul class="links">
-      <li><a href="mailto:[EMAIL]">[EMAIL]</a></li>
+      <li><a href="mailto:badwo.media@gmail.com">badwo.media@gmail.com</a></li>
       <li><a href="https://www.instagram.com/badwo_media/" target="_blank" rel="noopener">Instagram — @badwo_media</a></li>
-      <li><a href="https://tiktok.com/@[cont]" target="_blank" rel="noopener">TikTok — [@cont]</a></li>
-      <li><a href="https://youtube.com/@badwo_media" target="_blank" rel="noopener">YouTube — [canal]</a></li>
+      <li><a href="https://www.tiktok.com/@badwo_media" target="_blank" rel="noopener">TikTok — @badwo_media</a></li>
+      <li><a href="https://youtube.com/@badwo_media" target="_blank" rel="noopener">YouTube — @badwo_media</a></li>
     </ul>
   </div>
 
   <!--
-    FORMULAR (Formspree): faceți cont pe formspree.io, creați un formular nou
-    și înlocuiți XXXXXXXX de mai jos cu codul primit (ex: https://formspree.io/f/abcdwxyz).
+    FORMULAR (Web3Forms, gratuit 250 mesaje/lună) — mesajele vin pe badwo.media@gmail.com.
+    Înlocuiți CHEIA-VOASTRA de mai jos cu cheia primită pe email de la Web3Forms.
   -->
-  <form class="form" id="contact-form" action="https://formspree.io/f/XXXXXXXX" method="POST">
-    <input type="hidden" name="_subject" value="Mesaj nou de pe site-ul BADWO Media">
-    <p class="hidden"><label>Nu completa: <input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label></p>
-    <div class="field"><label for="nume">NUME</label><input id="nume" name="nume" type="text" placeholder="Cum te cheamă" required autocomplete="name"></div>
+  <form class="form" id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+    <input type="hidden" name="access_key" value="0aef2e41-bc1f-40ac-9697-3a45dd9f12d6">
+    <input type="hidden" name="subject" value="Mesaj nou de pe site-ul BADWO Media">
+    <input type="hidden" name="from_name" value="Site BADWO Media">
+    <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+    <div class="field"><label for="nume">NUME</label><input id="nume" name="name" type="text" placeholder="Cum te cheamă" required autocomplete="name"></div>
     <div class="field"><label for="email">EMAIL</label><input id="email" name="email" type="email" placeholder="adresa@exemplu.ro" required autocomplete="email"></div>
     <div class="field"><label for="tip">TIP PROIECT</label>
       <select id="tip" name="tip">
         <option>Short film</option><option>Videoclip</option><option>Editare</option><option>Fotografie</option><option>Colaborare</option><option>Altceva</option>
       </select>
     </div>
-    <div class="field"><label for="mesaj">MESAJ</label><textarea id="mesaj" name="mesaj" rows="4" placeholder="Povestește-ne pe scurt ideea" required></textarea></div>
+    <div class="field"><label for="mesaj">MESAJ</label><textarea id="mesaj" name="message" rows="4" placeholder="Povestește-ne pe scurt ideea" required></textarea></div>
     <button type="submit" class="btn btn-accent">Trimite mesajul
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
     </button>
